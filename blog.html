@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>마포 셔츠룸 프록시 보안 블로그 | 24시 안심 보안</title>
+    <meta name="description" content="마포 셔츠룸 프록시 보안의 실제 이야기. 24시 보안, 실시간 모니터링, 완벽한 익명성 서비스에 대한 내부자 경험담. 010-6279-0862">
+    <meta name="keywords" content="마포 셔츠룸 블로그, 프록시 보안 후기, 셔츠룸 보안 팁, 마포 보안 서비스, 익명 보안 경험">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sf-t3-1779642675702-490.pages.dev">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta property="og:title" content="마포 셔츠룸 프록시 보안 블로그">
+    <meta property="og:description" content="프록시 보안 요원이 직접 쓴 마포 셔츠룸 현장 이야기. 진짜 보안의 모든 것.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sf-t3-1779642675702-490.pages.dev/blog">
+    <meta property="og:image" content="https://sf-t3-1779642675702-490.pages.dev/og-blog.jpg">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { background: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; line-height: 1.6; }
+        body { min-height: 100vh; display: flex; flex-direction: column; }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1 { font-size: clamp(2rem, 6vw, 4rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: #ff3c00; text-shadow: 0 0 20px #ff3c00; margin-bottom: 0.5em; }
+        h2 { font-size: clamp(1.4rem, 4vw, 2.5rem); font-weight: 800; text-transform: uppercase; color: #ff3c00; margin-bottom: 0.6em; border-left: 6px solid #ff3c00; padding-left: 0.6em; }
+        h3 { font-size: clamp(1.1rem, 3vw, 1.8rem); font-weight: 700; color: #f0f0f0; margin-bottom: 0.4em; }
+        p, li, blockquote { font-size: clamp(0.95rem, 2vw, 1.15rem); color: #c0c0c0; margin-bottom: 1em; }
+        a { color: #ff3c00; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+        a:hover { color: #ff7a3d; text-shadow: 0 0 8px #ff7a3d; }
+        strong, b { color: #ffffff; font-weight: 800; }
+        ul { list-style: none; padding-left: 0; }
+        ul li::before { content: '▸ '; color: #ff3c00; font-weight: bold; }
+
+        /* ===== LAYOUT ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 4rem 0; border-bottom: 2px dashed #333; }
+        section:last-of-type { border-bottom: none; }
+
+        /* ===== HEADER & NAV ===== */
+        header { background: #111; border-bottom: 3px solid #ff3c00; padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 900; color: #ff3c00; text-transform: uppercase; letter-spacing: 0.15em; }
+        nav { position: relative; }
+        nav ul { display: flex; gap: 2rem; align-items: center; }
+        nav ul li { margin: 0; }
+        nav ul li::before { content: none; }
+        nav a { color: #e0e0e0; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; padding: 0.3em 0.6em; border: 1px solid transparent; transition: all 0.2s; }
+        nav a:hover { color: #ff3c00; border-color: #ff3c00; }
+        .hamburger { display: none; background: none; border: 1px solid #ff3c00; color: #ff3c00; font-size: 1.8rem; cursor: pointer; padding: 0.2em 0.6em; }
+
+        /* ===== HERO ===== */
+        .hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%); position: relative; overflow: hidden; min-height: 70vh; display: flex; align-items: center; }
+        .hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,60,0,0.04) 40px, rgba(255,60,0,0.04) 80px); pointer-events: none; }
+        .hero .container { position: relative; z-index: 1; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; }
+        .hero p { font-size: clamp(1rem, 2.5vw, 1.4rem); max-width: 600px; }
+
+        /* ===== FEATURE CARDS ===== */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .feature-card { background: #151515; border: 1px solid #333; padding: 2rem; border-radius: 0; transition: border-color 0.3s, transform 0.2s; }
+        .feature-card:hover { border-color: #ff3c00; transform: translateY(-4px); }
+        .feature-card h3 { font-size: 1.3rem; margin-bottom: 0.5em; }
+        .feature-card p { font-size: 0.95rem; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial-card { background: #111; border-left: 4px solid #ff3c00; padding: 1.5rem 2rem; }
+        .testimonial-card blockquote { font-style: italic; margin-bottom: 0.5em; }
+        .testimonial-card cite { display: block; text-align: right; color: #888; font-size: 0.85rem; }
+
+        /* ===== CTA ===== */
+        .cta { background: #ff3c00; color: #0a0a0a; text-align: center; padding: 4rem 0; }
+        .cta h2 { color: #0a0a0a; border-left: none; }
+        .cta p { color: #1a1a1a; font-weight: 600; }
+        .cta .tel-link { display: inline-block; background: #0a0a0a; color: #ff3c00; font-size: 1.8rem; font-weight: 900; padding: 0.6em 1.5em; text-decoration: none; border-radius: 0; margin-top: 1em; transition: background 0.2s; }
+        .cta .tel-link:hover { background: #222; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #0a0a0a; border-top: 3px solid #ff3c00; padding: 2rem 0; text-align: center; }
+        footer p { font-size: 0.8rem; color: #666; margin: 0; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 0 1rem; }
+            section { padding: 2.5rem 0; }
+            nav ul { display: none; flex-direction: column; background: #111; position: absolute; top: 100%; right: 0; width: 200px; border: 1px solid #333; padding: 1rem; gap: 0.8rem; }
+            nav ul.open { display: flex; }
+            .hamburger { display: block; }
+            .header-inner { position: relative; }
+            .hero { min-height: 50vh; }
+            .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+            .features-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .cta .tel-link { font-size: 1.4rem; padding: 0.5em 1em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">⟁ 마포 셔츠룸</div>
+            <nav>
+                <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about">서비스</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                    <li><a href="/contact">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero = 블로그 제목 & 인트로 -->
+        <section class="hero">
+            <div class="container">
+                <h1>마포 셔츠룸 프록시 보안<br>현장의 진짜 이야기</h1>
+                <p>24시 보안 요원이 직접 겪은 익명성 보호, 실시간 모니터링, 그리고 예상치 못한 순간들. 프록시 보안 뒤에 숨은 생생한 경험을 들려드립니다.</p>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 1.5rem;">2025년 3월 15일 · by 보안맨</p>
+            </div>
+        </section>
+
+        <!-- Feature Cards = 블로그 본문 핵심 포인트 -->
+        <section>
+            <div class="container">
+                <h2>완벽한 보안? 생각보다 훨씬 복잡하다</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>익명성 유지의 기술</h3>
+                        <p>처음 마포 셔츠룸에 투입됐을 때, 가장 신경 쓰였던 건 고객의 익명성. 프록시 IP는 기본이고, 출입 기록조차 암호화해서 저장해요. 한번은 한 고객이 "내 방문 기록 완전히 지워줘" 하길래 시스템상 최종 삭제 불가능하단 걸 설명해드렸는데, 오히려 더 신뢰하시더라고요. 철저한 보안이 믿음을 만드는 순간이었죠.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>실시간 모니터링의 현실</h3>
+                        <p>모니터링실에서 12시간 근무한 적 있어요. 화면 8개를 동시에 보면서 이상 징후 체크하는데, 진짜 대부분은 평범한 밤이에요. 하지만 딱 한 번, 누군가 외부에서 무단 접속 시도한 적이 있었는데 즉시 차단하고 로그 분석해서 경찰에 넘겼죠. 바로 그날 고객분이 "여기 진짜 안전하네" 하신 말씀이 아직도 기억나요.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>24시 보안의 숨은 이야기</h3>
+                        <p>새벽 3시, 셔츠룸에서 작은 소란 상황이 발생했어요. 취객 두 분이 말다툼 하다가 소리가 커진 건데, 저희 대응팀이 2분도 안 돼서 도착했죠. 사실 그날 저도 막 교대받고 쉬는 중이었는데, 무전 듣고 바로 뛰어나갔어요. 보안은 24시라는 말이 빈말이 아니에요. 진짜 24시간 깨어 있어야 합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials = 개인적 일화/사용 후기 형태 -->
+        <section>
+            <
+</body>
+</html>
