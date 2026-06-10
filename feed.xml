@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title><![CDATA[마포 마포 셔츠룸]]></title>
-  <link>https://sf-t3-1779642675702-490.pages.dev</link>
-  <description><![CDATA[마포 프록시 보안 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-  <language>ko-KR</language>
-  <pubDate>Thu, 28 May 2026 13:39:34 GMT</pubDate>
-  <lastBuildDate>Thu, 28 May 2026 13:39:34 GMT</lastBuildDate>
-  <atom:link href="https://sf-t3-1779642675702-490.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
+  <title><![CDATA[프록시 보안]]></title>
+  <link>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-490</link>
+  <description><![CDATA[프록시 보안 - 마포 셔츠룸 관련 최신 소식 및 가이드]]></description>
+  <language>ko</language>
+  <pubDate>Wed, 10 Jun 2026 20:13:31 GMT</pubDate>
+  <lastBuildDate>Wed, 10 Jun 2026 20:13:31 GMT</lastBuildDate>
+  <atom:link href="https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-490/feed.xml" rel="self" type="application/rss+xml" />
   
     <item>
-      <title><![CDATA[마포 마포 셔츠룸 - 공식 홈페이지 오픈 안내]]></title>
-      <link>https://sf-t3-1779642675702-490.pages.dev/</link>
-      <guid isPermaLink="true">https://sf-t3-1779642675702-490.pages.dev/</guid>
-      <description><![CDATA[마포 프록시 보안 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-      <pubDate>Thu, 28 May 2026 13:39:34 GMT</pubDate>
+      <title><![CDATA[창작한 제목]]></title>
+      <link>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-490/posts/field_note-001-coy5na.html</link>
+      <guid isPermaLink="true">https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-490/posts/field_note-001-coy5na.html</guid>
+      <description><![CDATA[Data Miner's Dark Souls 1 Demo Delve: Unpacking Hidden Variables 아, 진짜... 다양한 버전의 소울류 게임에서 존재했던 미사용 데이터와 그로 인해 배치된 차이를 분석해 보겠습니다. 오늘은 게임 파일에서 발견된 미사용 ]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 </channel>
 </rss>
