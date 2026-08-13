@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · sf-t3-1779642675702-490</title>
+  <meta name="description" content="sf-t3-1779642675702-490에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-490.maphoshirts.today/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* ===== RESET & BASE ===== */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ scroll-behavior: smooth;
+ font-size: 16px;
+ }
+ body {
+ font-family: 'Courier New', 'Pretendard Variable', monospace;
+ background: #0a0a0f;
+ color: #e0e0e0;
+ line-height: 1.6;
+ min-height: 100vh;
+ /* 네온 보이드 텍스처 느낌 */
+ background-image: radial-gradient(circle at 20% 30%, rgba(255, 0, 128, 0.03) 0%, transparent 60%),
+ radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.03) 0%, transparent 60%);
+ }
+ /* ===== TYPOGRAPHY ===== */
+ h1 {
+ font-size: clamp(2.5rem, 6vw, 4rem);
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ line-height: 0.95;
+ color: #ffffff;
+ text-shadow: 0 0 20px rgba(255, 0, 128, 0.5), 0 0 40px rgba(0, 255, 255, 0.2);
+ }
+ h2 {
+ font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: -0.01em;
+ margin-bottom: 1rem;
+ color: #ff0080;
+ border-left: 4px solid #00ffff;
+ padding-left: 1rem;
+ }
+ h3 {
+ font-size: 1.2rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ color: #00ffff;
+ margin-bottom: 0.5rem;
+ }
+ p, li, blockquote {
+ font-size: 1rem;
+ margin-bottom: 1rem;
+ color: #c0c0c0;
+ }
+ a {
+ color: #ff0080;
+ text-decoration: underline wavy 2px;
+ text-underline-offset: 4px;
+ transition: all 0.2s;
+ }
+ a:hover {
+ color: #00ffff;
+ text-decoration: underline solid;
+ }
+ strong, b {
+ color: #ffffff;
+ font-weight: 700;
+ }
+ ul {
+ list-style: none;
+ padding-left: 0;
+ }
+ ul li::before {
+ content: "⦿ ";
+ color: #ff0080;
+ font-weight: bold;
+ }
+ /* ===== LAYOUT ===== */
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ }
+ section {
+ padding: 4rem 0;
+ position: relative;
+ }
+ section::after {
+ content: '';
+ display: block;
+ width: 100%;
+ height: 1px;
+ background: linear-gradient(90deg, transparent, #ff0080, #00ffff, transparent);
+ margin: 2rem 0;
+ }
+ /* ===== NAVIGATION ===== */
+ header {
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ background: rgba(10, 10, 15, 0.95);
+ backdrop-filter: blur(8px);
+ border-bottom: 1px solid rgba(255, 0, 128, 0.3);
+ padding: 0.8rem 0;
+ }
+ .nav-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ }
+ .logo {
+ font-size: 1.5rem;
+ font-weight: 900;
+ text-transform: uppercase;
+ color: #ffffff;
+ text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+ letter-spacing: -0.03em;
+ }
+ .logo span {
+ color: #ff0080;
+ }
+ nav {
+ display: flex;
+ gap: 2rem;
+ align-items: center;
+ }
+ nav a {
+ color: #c0c0c0;
+ text-decoration: none;
+ font-size: 0.9rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ transition: color 0.2s;
+ }
+ nav a:hover,
+ nav a.active {
+ color: #00ffff;
+ text-decoration: none;
+ }
+ .tel-link {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.5rem;
+ background: #ff0080;
+ color: #0a0a0f;
+ padding: 0.4rem 1.2rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ text-decoration: none;
+ border-radius: 0;
+ clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+ transition: all 0.3s;
+ font-size: 0.85rem;
+ }
+ .tel-link:hover {
+ background: #00ffff;
+ color: #0a0a0f;
+ text-decoration: none;
+ transform: scale(1.05);
+ }
+ /* 햄버거 메뉴 (모바일) */
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ padding: 5px;
+ background: none;
+ border: none;
+ }
+ .hamburger-menu span {
+ display: block;
+ width: 28px;
+ height: 2px;
+ background: #ffffff;
+ transition: all 0.3s;
+ }
+ .hamburger-menu.open span:nth-child(1) {
+ transform: rotate(45deg) translate(5px, 5px);
+ }
+ .hamburger-menu.open span:nth-child(2) {
+ opacity: 0;
+ }
+ .hamburger-menu.open span:nth-child(3) {
+ transform: rotate(-45deg) translate(5px, -5px);
+ }
+ /* 모바일 반응형 */
+ @media (max-width: 768px) {
+ .hamburger-menu {
+ display: flex;
+ }
+ nav {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ flex-direction: column;
+ background: rgba(10, 10, 15, 0.98);
+ padding: 1.5rem;
+ gap: 1.2rem;
+ border-bottom: 1px solid #ff0080;
+ }
+ nav.open {
+ display: flex;
+ }
+ .tel-link {
+ margin-top: 0.5rem;
+ width: fit-content;
+ }
+ }
+ /* ===== HERO / INFO INTRO ===== */
+ .hero-info {
+ text-align: center;
+ padding: 6rem 0 3rem;
+ }
+ .hero-info h1 {
+ margin-bottom: 1.5rem;
+ }
+ .hero-info p {
+ max-width: 720px;
+ margin: 0 auto 2rem;
+ font-size: 1.15rem;
+ }
+ .info-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ }
+ .info-card {
+ background: rgba(255, 255, 255, 0.02);
+ border: 1px solid rgba(255, 0, 128, 0.2);
+ padding: 2rem 1.5rem;
+ transition: all 0.3s;
+ position: relative;
+ }
+ .info-card:hover {
+ border-color: #00ffff;
+ background: rgba(0, 255, 255, 0.05);
+ box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+ }
+ .info-card h3 {
+ margin-bottom: 1rem;
+ }
+ .info-card p {
+ font-size: 0.95rem;
+ }
+ /* ===== FOOTER ===== */
+ footer {
+ border-top: 1px solid rgba(255, 0, 128, 0.3);
+ padding: 2rem 0;
+ text-align: center;
+ font-size: 0.85rem;
+ color: #888;
+ }
+ footer a {
+ color: #ff0080;
+ text-decoration: none;
+ }
+ footer a:hover {
+ color: #00ffff;
+ }
+ /* ===== 추가 요소 ===== */
+ .highlight {
+ background: linear-gradient(135deg, #ff0080, #00ffff);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-weight: bold;
+ }
+ .mt-2 { margin-top: 2rem; }
+ .mb-1 { margin-bottom: 1rem; }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · sf-t3-1779642675702-490">
+  <meta property="og:description" content="sf-t3-1779642675702-490에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-490.maphoshirts.today/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="nav-container">
+ <div class="logo"><span>●</span> 마포 셔츠룸</div>
+ <button class="hamburger-menu" aria-label="메뉴 열기" onclick="toggleMenu()">
+ 
+ 
+ 
+ </button>
+ <nav id="mainNav">
+ <a href="/">홈</a>
+ <a href="/info" class="active">정보</a>
+ <a href="/services">서비스</a>
+ <a href="/contact">연락처</a>
+ 
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-coy5na.html">마포 셔츠룸</a>
+        <p class="post-item__summary">마포 지역에서 최근 주목받고 있는 셔츠룸은 현대적인 감각과 프라이빗한 공간을 결합한 새로운 형태의 유흥 문화로 자리 잡고 있습니다. 이곳은 기존의 일반적인 유흥 업소와는 차별화된 시스템을 도입하여 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-937.html">디지털 그림자를 걷어내는 방법, 마포 프록시 보안의 올바른 이해</a>
+        <p class="post-item__summary">요즘 것들은 인터넷 연결 하나로 세상 모든 정보를 얻을 수 있다고 믿죠. 얼마나 순진한 판단인지 모르겠습니다만, 젊은 분들의 그런 기세 좋은 모습을 보면 저도 한때 저랬던 적이 있었나 싶어 쓴웃음부</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0069.html">마포 셔츠룸 보안 운영, 업종별 프록시 전략이 중요한 이유</a>
+        <p class="post-item__summary">마포에서 셔츠룸을 운영하는 사업장들은 프록시 보안 시스템 도입을 통해 안정적인 비즈니스 환경을 확보하는 추세다. 온라인 예약과 디지털 홍보 채널이 활성화되면서 각 업소의 운영 방식에 맞는 보안 전략</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0070.html">마포 셔츠룸: 프록시 보안이 돋보이는 도심 속 편리한 공간</a>
+        <p class="post-item__summary">마포 셔츠룸은 도심 한가운데에 위치한 한정된 규모의 프록시 보안 전문점이다. 은은한 조명과 재즈 선율이 어우러져 신비로운 분위기를 연출한다. 고객은 비가 낮은 시간에 쉽게 접근할 수 있다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0071.html">마포 셔츠룸 업소의 온라인 가시성 확보 방법</a>
+        <p class="post-item__summary">마포 셔츠룸 시장은 꾸준히 성장하면서 업소 간 경쟁도 치열해지고 있다. 단순히 오프라인 입지만으로는 한계가 있으며, 온라인에서의 존재감이 실제 방문 예약으로 이어지는 구조가 확고히 자리잡았다. 따라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0072.html">마포 셔츠룸, 프록시 보안과 비즈니스 안전의 새로운 지표</a>
+        <p class="post-item__summary">마포 셔츠룸은 지리적 이점과 고급 프록시 보안 솔루션을 결합해 기업의 네트워크 보호를 강화합니다. 이 업체는 마포 지역 중심으로 전국의 다양한 중소기업과 스타트업을 대상으로 전문 서비스를 제공합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0073.html">마포 셔츠룸, 프록시 보안 시스템이 갖춰진 프라이빗 공간의 선택 기준</a>
+        <p class="post-item__summary">셔츠룸은 일반 유흥 공간과 달리 프라이빗한 분위기에서 비즈니스 미팅이나 특별한 자리를 원하는 방문객들이 많이 찾는 공간이다. 마포 지역에서 운영 중인 셔츠룸들 중에서는 프록시 보안 시스템을 적극 도</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0074.html">마포 셔츠룸, 프록시 보안의 새로운 표준을 제시하다</a>
+        <p class="post-item__summary">마포 셔츠룸은 마포 지역에서 프록시 보안 서비스를 제공하며 고도의 신뢰성을 자랑합니다. 웹 트래픽이 증가함에 따라 개인 정보와 통신 보안은 필수적이며, 이 업체는 최첨단 암호화 기술을 적용합니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0075.html">마포 셔츠룸 이용 전 꼭 알아야 할 보안 체크포인트</a>
+        <p class="post-item__summary">최근 마포 지역에서 프록시 보안 서비스를 제공하는 셔츠룸 업체가 늘어나면서 관련 정보를 찾는 분들이 많아졌습니다. 홍대와 합정을 중심으로 분포한 이곳들은 일반 오피스텔이나 상가 건물 내에 위치해 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0076.html">마포 셔츠룸, 프록시 보안으로 새 맞춤형 시장 접근</a>
+        <p class="post-item__summary">마포 셔츠룸은 프록시 보안 기술이 결합된 새로운 소셜 바이럴 전략을 제시한다. 이 서비스는 사용자 데이터를 안전하게 보호하면서도 개인화된 메시지를 전달한다. 결과적으로 경쟁사보다 한 걸음 앞서 나갈</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0077.html">마포 셔츠룸 이용 전 꼭 알아야 할 보안 수칙</a>
+        <p class="post-item__summary">최근 마포 지역에서 셔츠룸을 방문하는 고객이 늘면서 관련 문의도 함께 증가하고 있다. 특히 홍대입구와 합정 일대를 중심으로 새로운 업소들이 문을 열면서 선택의 폭이 넓어졌다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0078.html">마포 셔츠룸, 프록시 보안으로 고객 신뢰 쌓다</a>
+        <p class="post-item__summary">마포 셔츠룸은 프록시 보안 전문가로, 고객이 안전하게 인터넷 서핑을 즐길 수 있도록 최첨단 솔루션을 제공합니다. 집중적인 트래픽 관리와 차세대 암호화 기술을 통해 개인정보 유출 위험을 최소화합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0079.html">마포 셔츠룸 방문 전 알아두면 도움이 되는 선택 팁</a>
+        <p class="post-item__summary">마포 지역은 홍대입구, 합정, 상수역 인근을 중심으로 다양한 스타일의 셔츠룸이 운영되고 있다. 각 업소마다 콘셉트와 분위기, 시스템이 다르기 때문에 방문 목적에 맞는 곳을 선택하는 것이 무엇보다 중</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0080.html">마포 셔츠룸에서 찾은 프록시 보안의 새로운 접근법</a>
+        <p class="post-item__summary">마포 셔츠룸은 마포의 번화한 거리 한가운데 위치한 프록시 보안 전문점이다. 이곳은 고객의 민감한 데이터 보호를 위해 최신 암호화 기술을 도입하고 있다. 특히, 개인용 VPN 서비스와 기업용 프록시 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0081.html">마포 셔츠룸, 변화하는 트렌드 속에서 자리 잡다</a>
+        <p class="post-item__summary">서울 마포 지역은 유흥 업계에서 독특한 입지를 차지하고 있다. 홍대와 합정을 중심으로 다양한 문화가 공존하는 이곳에서 셔츠룸은 나름의 충성 고객층을 형성하며 꾸준히 운영되고 있다. 최근 들어 고객들</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0082.html">마포 셔츠룸, 지역 문화와 패션이 만나는 실험 공간</a>
+        <p class="post-item__summary">마포 셔츠룸은 2020년부터 지역 커뮤니티에서 시그니처 스타일을 제공해왔습니다. 이 공간은 패션과 예술을 결합한 실험적인 프로그램을 주최하며, 젊은 디자이너들에게 발판을 마련해 주고 있습니다. 매주</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0083.html">마포 셔츠룸을 찾는 방식이 달라지고 있다</a>
+        <p class="post-item__summary">마포 셔츠룸을 찾는 사람들의 선택 기준이 최근 들어 뚜렷하게 변화하고 있다. 과거에는 단순히 위치나 가격대만을 고려하는 경우가 많았지만, 지금은 사전 정보를 더 꼼꼼히 확인하고 비교하는 분위기가 자</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0084.html">마포 셔츠룸, 프라이버시를 품은 비밀 공간</a>
+        <p class="post-item__summary">마포 셔츠룸은 마포구 동네 한가운데 비밀스러운 분위기와 현대적인 디자인이 어우러진 프리미엄 바다. 여기에서는 예약만으로 조용한 라운지와 고급 뷰가 제공된다. 손님들은 개인 공간을 중요하게 여기며, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0085.html">마포 셔츠룸, 프록시 보안 서비스의 새로운 기준</a>
+        <p class="post-item__summary">마포 셔츠룸은 최근 프록시 보안 업계에서 주목받는 서비스로 자리 잡고 있다. 보안 솔루션에 대한 수요가 점차 증가하면서 다양한 형태의 셔츠룸이 등장하고 있으며, 마포 지역 역시 이러한 흐름에 맞춰 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0231.html">마포 셔츠룸 이용 시 고려해야 할 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">마포 셔츠룸을 이용한 회식 자리는 비즈니스 관계를 더욱 돈독하게 만들어주는 선택지가 될 수 있습니다. 그러나 많은 분이 성급하게 예약을 진행하다가 공간의 규모나 부가적인 비용 문제로 계획에 차질을 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
